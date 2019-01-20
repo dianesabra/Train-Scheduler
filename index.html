@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Time Scheduler</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+      .card-body a {
+        word-break: break-all;
+      }
+
+      .articleHeadline {
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="jumbotron" style="background-color: orange ; color: white;">
+        <h1 class="text-center">
+          <strong> <i class="fa"></i>Anytime is Train Time</strong>
+        </h1>
+        <h3 class="text-center">Choo Choo. Chee Chee.</h3>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <br />
+          <div class="card">
+            <div class="card-header">
+              <strong> <i class="fa"></i>Current Train Schedule</strong>
+            </div>
+
+            <table class="table table-hover" id="train-table">
+              <thead>
+                <tr>
+                  <th>Train Line</th>
+                  <th>Destination</th>
+                  <th>Frequency (min)</th>
+                  <th>Next Train</th>
+                  <th>Minutes Away</th>
+                </tr>
+              </thead>
+              <tbody id="trainSchedule"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <br />
+          <div class="card">
+            <div class="card-header">
+              <strong> <i class="fa"></i>Add Train</strong>
+            </div>
+            <div class="card-body">
+              <form role="form">
+                <div class="form-group">
+                  <label for="trainName-lbl">Train Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="trainName-input"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="destination-lbl">Destination</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="destination-input"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="firstTrainTime-lbl"
+                    >First Train Time (HH:mm - military time)</label
+                  >
+                  <input
+                    type="time"
+                    class="form-control"
+                    id="startTime-input"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="frequency-lbl">Frequency (min)</label>
+                  <input type="number" class="form-control" id="freq-input" />
+                </div>
+                <button type="submit" class="btn btn-default" id="run-submit">
+                  <i class="fa"></i>Submit
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- jQuery JS -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <!-- FireBase Database Link -->
+    <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- Code to the JavaScript File -->
+    <script src="assets/javascript.js"></script>
+  </body>
+</html>
